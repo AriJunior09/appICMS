@@ -1,7 +1,7 @@
 
 ---
 
-# Calculadora de ICMS e Substituição Tributária - Versão 2.0
+# Calculadora de ICMS e Substituição Tributária - Versão 1.0
 
 Este é um aplicativo Java simples que realiza o cálculo do ICMS (Imposto sobre Circulação de Mercadorias e Serviços) e a Substituição Tributária (ST). O programa permite que o usuário insira o valor de um produto e o percentual do ICMS, calculando automaticamente o valor do ICMS, a base de substituição, o ICMS de substituição e o valor total da substituição.
 
