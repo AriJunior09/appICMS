@@ -1,9 +1,25 @@
-package org.example;
+package org.example.versao01;
 
 import java.util.Scanner;
+/**
+ * IcmsCalculator.java
+ *
+ * Esta classe é responsável por calcular o ICMS e a base de substituição
+ * para produtos, considerando o valor do produto e o percentual do ICMS.
+ *
+ * @author Ari Junior
+ * @version 1.0
+ * @since 2024-09-30
+ */
+public class AppCalculadora {
 
-public class App {
-
+   /**
+    * Calcula o ICMS com base no valor do produto e percentual do ICMS.
+    *
+    * @param /valorProduto O valor do produto
+    * @param /percentualIcms O percentual do ICMS
+    * @return O valor do ICMS calculado
+    */
    public static void main(String[] args) {
       Scanner scanner = new Scanner(System.in);
 
