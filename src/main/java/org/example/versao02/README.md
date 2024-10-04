@@ -1,7 +1,7 @@
 
 ---
 
-# Calculo de ICMS - Versão 2.0
+# Calculadora de ICMS e Substituição Tributária - Versão 2.0
 
 ## Descrição
 
