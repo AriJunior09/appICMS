@@ -18,6 +18,17 @@ Este programa em Java é uma aplicação gráfica que calcula o ICMS e a base de
 - **Java**: Linguagem de programação utilizada para o desenvolvimento.
 - **Swing**: Biblioteca gráfica para a criação da interface do usuário.
 
+
+## Visão gráfica da Tela:
+- **Tela inicial**
+
+![img.png](img.png)
+
+- **Tela com valores**
+
+![img_1.png](img_1.png)
+
+
 ## Como Usar
 
 1. Compile o código fonte:
