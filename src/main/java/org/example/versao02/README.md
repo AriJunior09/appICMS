@@ -22,11 +22,12 @@ Este programa em Java é uma aplicação gráfica que calcula o ICMS e a base de
 ## Visão gráfica da Tela:
 - **Tela inicial**
 
-![img.png](img.png)
+![alt text](image-1.png)
 
 - **Tela com valores**
 
-![img_1.png](img_1.png)
+![alt text](image-2.png)
+
 
 
 ## Como Usar
