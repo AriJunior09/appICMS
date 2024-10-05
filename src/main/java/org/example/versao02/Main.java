@@ -6,6 +6,18 @@ import java.awt.event.ActionListener;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+/**
+ * Main.java
+ * Esta classe é responsável por calcular o ICMS e a base de substituição
+ * para produtos, considerando o valor do produto e o percentual do ICMS.
+ *
+ * @author Ari Junior
+ * @version 2.0
+ * @since 2024-10-03
+ * 
+ */
+
+
 public class Main {
     public static void main(String[] args) {
         // Criação da janela principal
