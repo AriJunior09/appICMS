@@ -5,23 +5,12 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.NumberFormat;
 import java.util.Locale;
-/**
- * Main.java
- * Esta classe é responsável por calcular o ICMS e a base de substituição
- * para produtos, considerando o valor do produto e o percentual do ICMS.
- *
- * @author Ari Junior
- * @version 2.0
- * @since 2024-10-03
- */
+
 public class Main {
-
-
-
     public static void main(String[] args) {
         // Criação da janela principal
         JFrame frame = new JFrame("Calculo de ICMS");
-        frame.setSize(400, 300);
+        frame.setSize(500, 300);                // Largura e altura da tela
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);  // Para usar coordenadas absolutas
 
@@ -30,32 +19,37 @@ public class Main {
 
         // Campo para valor do produto
         JLabel lblProduto = new JLabel("Valor do Produto: R$");
-        lblProduto.setBounds(20, 20, 150, 25);
+        lblProduto.setBounds(20, 20, 250, 25);
         frame.add(lblProduto);
 
         JTextField txtProduto = new JTextField();
-        txtProduto.setBounds(170, 20, 150, 25);
+        txtProduto.setBounds(170, 20, 250, 25);
         frame.add(txtProduto);
 
         // Campo para percentual do ICMS
-        JLabel lblIcms = new JLabel("% do ICMS:");
-        lblIcms.setBounds(20, 60, 150, 25);
+        JLabel lblIcms = new JLabel("Percentual(%) do ICMS:");
+        lblIcms.setBounds(20, 60, 250, 25);
         frame.add(lblIcms);
 
         JTextField txtIcms = new JTextField();
-        txtIcms.setBounds(170, 60, 150, 25);
+        txtIcms.setBounds(170, 60, 250, 25);
         frame.add(txtIcms);
 
         // Botão de calcular
         JButton btnCalcular = new JButton("Calcular");
-        btnCalcular.setBounds(120, 100, 100, 25);
+        btnCalcular.setBounds(170, 100, 100, 25);
         frame.add(btnCalcular);
 
         // Campo de resultado
         JTextArea txtResultado = new JTextArea();
-        txtResultado.setBounds(20, 140, 350, 100);
+        txtResultado.setBounds(20, 140, 450, 100);
         txtResultado.setEditable(false);
         frame.add(txtResultado);
+
+        // Botão de limpar
+        JButton btnLimpar = new JButton("Limpar");
+        btnLimpar.setBounds(320, 100, 100, 25);
+        frame.add(btnLimpar);
 
         // Ação ao clicar no botão calcular
         btnCalcular.addActionListener(new ActionListener() {
@@ -75,15 +69,26 @@ public class Main {
                     NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
                     String resultado = String.format("Valor do ICMS: %s%n", nf.format(valorIcms)) +
-                            String.format("Base do ICMS de Substituicao: %s%n", nf.format(baseSubstituicao)) +
-                            String.format("ICMS de Substituicao: %s%n", nf.format(icmsSubstituicao)) +
-                            String.format("Valor de Substituicao: %s%n", nf.format(valorSubstituicao));
+                            String.format("Base do ICMS de Substituição: %s%n", nf.format(baseSubstituicao)) +
+                            String.format("ICMS de Substituição: %s%n", nf.format(icmsSubstituicao)) +
+                            String.format("Valor de Substituição: %s%n", nf.format(valorSubstituicao));
 
                     txtResultado.setText(resultado);
 
                 } catch (NumberFormatException ex) {
-                    txtResultado.setText("Por favor, insira valores validos.");
+                    txtResultado.setText("Por favor, insira valores válidos.");
                 }
+            }
+        });
+
+        // Ação ao clicar no botão limpar
+        btnLimpar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Limpar todos os campos de texto
+                txtProduto.setText("");
+                txtIcms.setText("");
+                txtResultado.setText("");
             }
         });
 
@@ -91,6 +96,7 @@ public class Main {
         frame.setVisible(true);
     }
 
+    // Métodos para cálculos
     public static double calcularIcms(double valorProduto, double percentualIcms) {
         return valorProduto * percentualIcms / 100.0;
     }
