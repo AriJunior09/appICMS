@@ -25,6 +25,9 @@ public class Main {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);  // Para usar coordenadas absolutas
 
+        // Centralizar a janela
+        frame.setLocationRelativeTo(null);
+
         // Campo para valor do produto
         JLabel lblProduto = new JLabel("Valor do Produto: R$");
         lblProduto.setBounds(20, 20, 150, 25);
