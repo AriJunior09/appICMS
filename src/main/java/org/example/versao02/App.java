@@ -6,25 +6,16 @@ import java.awt.event.ActionListener;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-/**
- * Main.java
- * Esta classe é responsável por calcular o ICMS e a base de substituição
- * para produtos, considerando o valor do produto e o percentual do ICMS.
- *
- * @author Ari Junior
- * @version 2.0
- * @since 2024-10-03
- * 
- */
 
+public class App {
 
-public class Main {
     public static void main(String[] args) {
         // Criação da janela principal
-        JFrame frame = new JFrame("Calculo de ICMS");
-        frame.setSize(500, 300);                // Largura e altura da tela
+        JFrame frame = new JFrame("Calculo de ICMS - v1.0");
+        frame.setSize(500, 390); // Largura e altura da tela (aumentei para caber as informações do autor e
+        // versão)
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(null);  // Para usar coordenadas absolutas
+        frame.setLayout(null); // Para usar coordenadas absolutas
 
         // Centralizar a janela
         frame.setLocationRelativeTo(null);
@@ -39,7 +30,7 @@ public class Main {
         frame.add(txtProduto);
 
         // Campo para percentual do ICMS
-        JLabel lblIcms = new JLabel("Percentual(%) do ICMS:");
+        JLabel lblIcms = new JLabel("Perc(%) do ICMS:");
         lblIcms.setBounds(20, 60, 250, 25);
         frame.add(lblIcms);
 
@@ -54,7 +45,7 @@ public class Main {
 
         // Campo de resultado
         JTextArea txtResultado = new JTextArea();
-        txtResultado.setBounds(20, 140, 450, 100);
+        txtResultado.setBounds(20, 140, 400, 100);
         txtResultado.setEditable(false);
         frame.add(txtResultado);
 
@@ -62,6 +53,11 @@ public class Main {
         JButton btnLimpar = new JButton("Limpar");
         btnLimpar.setBounds(320, 100, 100, 25);
         frame.add(btnLimpar);
+
+        // Exibir autor e versão
+        JLabel lblAutor = new JLabel("Autor: Ari Junior | Versão: 1.0");
+        lblAutor.setBounds(20, 300, 300, 25); // Posicionado na parte inferior da janela
+        frame.add(lblAutor);
 
         // Ação ao clicar no botão calcular
         btnCalcular.addActionListener(new ActionListener() {
