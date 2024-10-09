@@ -55,7 +55,7 @@ public class App {
         frame.add(btnLimpar);
 
         // Exibir autor e versão
-        JLabel lblAutor = new JLabel("Autor: Ari Junior | Versão: 1.0");
+        JLabel lblAutor = new JLabel("Autor: Ari Junior | Versao: 1.0");
         lblAutor.setBounds(20, 300, 300, 25); // Posicionado na parte inferior da janela
         frame.add(lblAutor);
 
