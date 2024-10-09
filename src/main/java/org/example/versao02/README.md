@@ -1,54 +1,53 @@
-
----
-
 # Calculadora de ICMS e Substituição Tributária - Versão 2.0
 
 ## Descrição
 
-Este programa em Java é uma aplicação gráfica que calcula o ICMS e a base de substituição para produtos, considerando o valor do produto e o percentual do ICMS. A interface é desenvolvida com a biblioteca Swing, permitindo que os usuários insiram os valores e obtenham os resultados de forma interativa.
+Este programa em Java é uma aplicação gráfica que calcula o ICMS e a base de substituição para produtos, considerando o valor do produto e o percentual do ICMS. A interface é desenvolvida com a biblioteca Swing, permitindo que os usuários insiram os valores e obtenham os resultados de forma interativa. Agora, inclui a funcionalidade de limpar os campos.
+
 
 ## Funcionalidades
 
 - **Cálculo do ICMS**: O usuário pode inserir o valor do produto e o percentual do ICMS para obter o valor do ICMS.
 - **Base de Substituição**: O programa calcula automaticamente a base de substituição com base no valor do produto.
 - **Resultados formatados**: Os resultados são exibidos em um formato monetário, facilitando a leitura.
+- **Limpar Campos**: Função para limpar todos os campos de entrada e saída.
+- **Informações de Autor e Versão**: A aplicação exibe o nome do autor e a versão na interface.
 
 ## Tecnologias Utilizadas
 
 - **Java**: Linguagem de programação utilizada para o desenvolvimento.
 - **Swing**: Biblioteca gráfica para a criação da interface do usuário.
 
-
 ## Visão gráfica da Tela:
+
 - **Tela inicial**
 
-![alt text](image-1.png)
+![img_3.png](img_3.png)
 
 - **Tela com valores**
 
-![alt text](image-2.png)
-
-
+![img_4.png](img_4.png)
 
 ## Como Usar
 
 1. Compile o código fonte:
    ```bash
-   javac -d . Main.java
+   javac -d . App.java
    ```
 
 2. Crie o arquivo JAR:
    ```bash
-   jar cfm Main.jar MANIFEST.MF org/example/versao02/Main.class
+   jar cfm App.jar MANIFEST.MF org/example/versao02/App.class
    ```
 
 3. Execute o programa:
    ```bash
-   java -jar Main.jar
+   java -jar App.jar
    ```
 
 4. Insira o **valor do produto** e o **percentual do ICMS** nos campos apropriados.
 5. Clique no botão **Calcular** para obter os resultados.
+6. Para limpar os campos, clique no botão **Limpar**.
 
 ## Exemplo de Entrada
 
