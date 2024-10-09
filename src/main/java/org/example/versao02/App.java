@@ -77,14 +77,14 @@ public class App {
                     NumberFormat nf = NumberFormat.getCurrencyInstance(new Locale("pt", "BR"));
 
                     String resultado = String.format("Valor do ICMS: %s%n", nf.format(valorIcms)) +
-                            String.format("Base do ICMS de Substituição: %s%n", nf.format(baseSubstituicao)) +
-                            String.format("ICMS de Substituição: %s%n", nf.format(icmsSubstituicao)) +
-                            String.format("Valor de Substituição: %s%n", nf.format(valorSubstituicao));
+                            String.format("Base do ICMS de Substituicao: %s%n", nf.format(baseSubstituicao)) +
+                            String.format("ICMS de Substituicao: %s%n", nf.format(icmsSubstituicao)) +
+                            String.format("Valor de Substituicao: %s%n", nf.format(valorSubstituicao));
 
                     txtResultado.setText(resultado);
 
                 } catch (NumberFormatException ex) {
-                    txtResultado.setText("Por favor, insira valores válidos.");
+                    txtResultado.setText("Por favor, insira valores validos.");
                 }
             }
         });
